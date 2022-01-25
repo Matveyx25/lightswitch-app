@@ -1,0 +1,45 @@
+@import '../../varibles.scss';
+
+.header{
+    width: 100%;
+    margin-top: 60px;
+    padding: 12px 0;
+    border-bottom: 1px solid $text-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo{
+      display: block;
+      font-family: 'Gilroy';
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: $text-color;
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    &__link{
+        display: block;
+        text-decoration: none;
+        color: $text-color;
+        
+        &__active{
+            margin-left: 48px;
+            text-decoration: none;
+            color: $active-color;
+            font-weight: 500;
+        }
+    }
+}

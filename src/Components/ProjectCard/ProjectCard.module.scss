@@ -1,0 +1,68 @@
+@import '../../varibles.scss';
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    padding: 40px 0;
+    border-bottom: 2px solid $text-color;
+    .img{
+        flex: 1 0 50%;
+        height: 400%;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        ul{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-bottom: 16px;
+            li{
+                list-style: none;
+                position: relative;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                &:not(:last-child){
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background: $active-color;
+                        margin: 0 12px;
+                    }
+                }
+            }
+        }
+        h5{
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 1.25rem;
+            opacity: 0.8;
+        }
+        a{
+            display: block;
+            margin-top: 32px;
+            font-size: 1.25rem;
+            text-decoration: none;
+            color: $text-color;
+            padding-bottom: 4px;
+            width: fit-content;
+            border-bottom: 1px solid $text-color;
+        }
+    }
+}
