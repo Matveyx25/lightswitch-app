@@ -1,0 +1,19 @@
+@import '../../varibles.scss';
+
+.wrapper {
+    div{
+        
+    }
+}
+
+.sectionTitle {
+    font-size: 6.25rem;
+    font-family: 'Dela Gothic One', cursive;
+    text-transform: uppercase;
+    margin-top: 120px;
+    @media screen and (max-width: 1040px) {
+        font-size: 2.5rem;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+}

@@ -17,6 +17,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/scrollbar"
 import SwiperCore, {Mousewheel, Scrollbar} from 'swiper';
+import { WhiteBlock } from '../../Components/WhiteBlock/WhiteBlock';
 
 SwiperCore.use([Mousewheel, Scrollbar]);
 
@@ -225,12 +226,6 @@ export const HomePage = () => {
         </div>
       </section>
     </div>
-    <section className={s.lightSection}>
-      <div className="container">
-        <h1>Понравились работы ?</h1>
-        <p>Свяжитесь с нами и давайте вместе создадим что-то удивительное</p>
-        <NavLink to="/">Написать нам</NavLink>
-      </div>
-    </section>
+    <WhiteBlock/>
   </div>
 };

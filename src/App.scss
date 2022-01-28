@@ -56,7 +56,6 @@ body{
       }
     }
   }
-  
 }
 
 
@@ -238,4 +237,85 @@ section{
 @keyframes left {
   0%{transform: translateY(-100px); opacity: 0;}
   100%{transform: translateY(0); opacity: 1;}
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 36px; /* gutter size */
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 80px;
+}
+
+.contactForm{
+  border-radius: 24px;
+  background: $text-color;
+  color: $background-color;
+  padding: 52px 120px;
+  width: 100%;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  p{
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  input, textarea{
+    width: 100%;
+    background: none;
+    color: $background-color;
+    border: none;
+    padding: 12px 0;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    outline: none !important;
+    border-bottom: 1px solid $background-color;
+    &::placeholder{
+      opacity: 1;
+      font-weight: 300;
+      &::after{
+        content:"*";
+        color: $active-color;
+      }
+    }
+  }
+  button{
+    background: none;
+    font-size: 1.25rem;
+    width: 323px;
+    padding: 13px 0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: $background-color;
+    display: block;
+    text-align: center;
+    border: 2px solid $background-color;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  textarea{
+    resize: none;
+    height: 124px;
+    margin: 0;
+  }
+  @media screen and (max-width: 1040px) {
+    padding: 80px 86px;
+    font-size: 1.25rem;
+    input, textarea{
+      font-size: 1.25rem;
+    }
+    textarea{
+      height: 98px;
+    }
+    button{
+      width: 100%;
+    }
+  }
 }

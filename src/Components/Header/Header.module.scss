@@ -42,4 +42,8 @@
             font-weight: 500;
         }
     }
+    @media screen and (max-width: 1040px){
+        .desctop{display: none;}
+        padding: 8px 0;
+    }
 }

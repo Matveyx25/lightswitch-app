@@ -110,35 +110,3 @@
     //    transform: translateX(calc((100vw - 1400px)/2));
     }
   }
-  .lightSection{
-      margin-top: 200px;
-      background: $text-color;
-      padding: 120px 0;
-      color: #393E46;
-      text-align: center;
-      h1{
-        font-family: 'Dela Gothic One', cursive;
-        font-size: 3.25rem;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-      }
-      p{
-          max-width: 514px;
-          font-size: 1.5rem;
-          margin: 0 auto;
-          margin-bottom: 32px;
-          display: block;
-      }
-      a{
-          display: block;
-          width: 323px;
-          text-align: center;
-          padding: 13px 0;
-          border-radius: 12px;
-          color: #393E46;
-          font-size: 1.25rem;
-          border: 2px solid #393E46;
-          margin: 0 auto;
-          text-decoration: none;
-      }
-  }
