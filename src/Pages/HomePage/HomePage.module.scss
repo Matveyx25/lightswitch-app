@@ -44,9 +44,20 @@
             }
         }
     }
+    @media screen and (max-width: 1040px){
+        ul {
+            padding: 12px 17.5px;
+            li{
+                font-size: 1rem;
+            }
+        }
+    }
 }
 .projectsSection{
     margin-top: 300px;
+    @media screen and (max-width: 1040px){
+        margin-top: 200px;
+    }
 }
 .projectsLink{
     font-size: 1.25rem;
@@ -60,6 +71,11 @@
     border: 2px solid $text-color;
     margin-top: 40px;
     font-weight: 500;
+    @media screen and (max-width: 1040px){
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 14.5px 0;
+    }
 }
 .wrapper{
     .sectionTitle{
@@ -69,11 +85,18 @@
         border-bottom: 2px solid $text-color;
         margin-bottom: 20px;
         text-transform: uppercase;
+        @media screen and (max-width: 1040px){
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
     }
 }
 
 .serveSection{
     margin-top: 200px;
+    @media screen and (max-width: 1040px){
+        margin-top: 160px;
+    }
 }
 
 .teamSection{
@@ -109,4 +132,27 @@
     //    max-width: calc(((100% / 3) * 2) + (100vw - 1400px)/2);
     //    transform: translateX(calc((100vw - 1400px)/2));
     }
-  }
+    @media screen and (max-width: 1040px){
+        margin-top: 160px;
+        &__row{
+            margin-top: 40px;
+            flex-direction: column;
+          }
+          &__content{
+             max-width: none;
+             p{
+                font-size: 1rem;
+             }
+             h5{
+                display: none;
+             }
+             a{
+                display: none;
+              }
+          }
+          &__slider{
+              max-width: none;
+              margin-top: 32px;
+          }
+    }
+}

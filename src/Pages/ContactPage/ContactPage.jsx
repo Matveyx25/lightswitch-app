@@ -1,9 +1,11 @@
 import React from 'react';
 import { ContactUs } from '../../Components/Form';
 import s from './ContactPage.module.css'
+import { AnimtedPage } from '../../AnimtedPage';
 
 export const ContactPage = () => {
-  return <div className="container">
+  return <AnimtedPage>
+      <div className="container">
         <section className={s.projectsSection}>
             <h1 className={s.sectionTitle}>Контакты</h1>
             <div className={s.row}>
@@ -34,4 +36,6 @@ export const ContactPage = () => {
             </div>
         </section>
     </div>
+  </AnimtedPage>
+  
 };

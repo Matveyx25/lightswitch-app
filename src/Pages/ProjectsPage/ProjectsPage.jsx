@@ -3,9 +3,10 @@ import { FlexCard } from '../../Components/FlexCard/FlexCard';
 import s from './ProjectPage.module.css'
 import Masonry from 'react-masonry-css'
 import { WhiteBlock } from '../../Components/WhiteBlock/WhiteBlock';
+import { AnimtedPage } from '../../AnimtedPage';
 
 export const ProjectsPage = () => {
-  return  <div>
+  return  <AnimtedPage>
     <div className="container">
         <section className={s.projectsSection}>
             <h1 className={s.sectionTitle}>Проекты</h1>
@@ -37,6 +38,5 @@ export const ProjectsPage = () => {
         </section>
     </div>
     <WhiteBlock/>
-  </div>
-  ;
+  </AnimtedPage>
 };
