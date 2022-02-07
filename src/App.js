@@ -1,10 +1,10 @@
 import './App.css';
 import { Header } from './Components/Header/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { HomePage } from './pages/HomePage/HomePage';
+import { HomePage } from './Pages/HomePage/HomePage';
 import { Footer } from './Components/Footer/Footer';
-import { ProjectsPage } from './pages/ProjectsPage/ProjectsPage';
-import { ContactPage } from './pages/ContactPage/ContactPage';
+import { ProjectsPage } from './Pages/ProjectsPage/ProjectsPage';
+import { ContactPage } from './Pages/ContactPage/ContactPage';
 import AnimatedCursor from 'react-animated-cursor';
 
 function App() {
