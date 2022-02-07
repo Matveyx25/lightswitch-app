@@ -42,8 +42,38 @@
             font-weight: 500;
         }
     }
+    .burger{display: none;}
     @media screen and (max-width: 1040px){
         .desctop{display: none;}
         padding: 8px 0;
+        .burger{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: center;
+            width: 62px;
+            position: relative;
+            &::before{
+                content: '';
+                position: relative;
+                display: block;
+                width: 62px;
+                height: 2px;
+                background: $text-color;
+            }
+            &::after{
+                content: '';
+                position: relative;
+                display: block;
+                width: 44px;
+                height: 2px;
+                background: $text-color;
+                margin-top: 8px;
+            }
+        }
+    }
+    @media screen and (max-width: 744px){
+        padding: 0;
+        border-bottom: none;
     }
 }

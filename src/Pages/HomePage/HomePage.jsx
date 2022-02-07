@@ -28,9 +28,9 @@ export const HomePage = () => {
       <div className="container">
         <section className={s.headerSection}>
             <h1>
-              Лаборатория 
+              <div>Лаборатория</div> 
               <span>цифрового</span>  
-              пронстранства
+              <div>пронстранства</div> 
             </h1>
             <ul className={s.serves}>
             <li>Сайты</li> 

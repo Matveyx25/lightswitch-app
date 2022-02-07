@@ -87,4 +87,24 @@
             }
         }
     }
+    @media screen and (max-width: 744px){
+        flex-direction: column-reverse;
+        .content{
+            margin-top: 16px;
+            ul{
+                margin-bottom: 12px;
+                font-size: 0.75rem;
+            }
+            h5{
+                font-size: 1.25rem;
+                margin-bottom: 8px;
+            }
+            p{
+                font-size: 0.875rem;
+            }
+            a{
+                font-size: 1rem;
+            }
+        }
+    }
 }

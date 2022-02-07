@@ -1,5 +1,14 @@
 @import '../../varibles.scss';
 
+@keyframes title {
+    0% {transform: translateY(100%)}
+    100% {transform: translateY(0)}
+}
+@keyframes titleBG {
+    0% {transform: translateY(0)}
+    100% {transform: translateY(100%)}
+}
+
 .headerSection{
     margin-top: 120px;
     width: 100%;
@@ -9,11 +18,38 @@
         display: block;
         text-align: center;
         font-size: 7.8vw;
+        position: relative;
         span{
             display: block;
             background: linear-gradient(180deg, #FD7014 0%, rgba(253, 112, 20, 0.03) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        *{
+            animation: title 0.8s forwards ease-in ;
+            position: relative;
+            transform: translateY(100%);
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: $background-color;
+                transform: translateY(0);
+                color: $background-color;
+                width: 100%;
+                height: 100%;
+                animation: titleBG 0.8s forwards ease-in ;
+            }
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}n){
+                    animation-delay: #{$i * 0.5}s;
+                    &::after{
+                        animation-delay: #{$i * 0.5}s;
+                    }
+                }
+            }
+            
         }
     }
     ul{
@@ -25,6 +61,8 @@
         border: 2px solid $text-color;
         border-radius: 100px;
         width: fit-content;
+        position: relative;
+        z-index: 10;
         li{
             list-style: none;
             font-size: 1.5rem;
@@ -44,6 +82,9 @@
             }
         }
     }
+    @media screen and (min-width: 1440px){
+        h1{font-size: 112px;}
+    }
     @media screen and (max-width: 1040px){
         ul {
             padding: 12px 17.5px;
@@ -51,6 +92,9 @@
                 font-size: 1rem;
             }
         }
+    }
+    @media screen and (max-width: 744px){
+        ul{display: none;}
     }
 }
 .projectsSection{
@@ -76,6 +120,12 @@
         font-size: 1.5rem;
         padding: 14.5px 0;
     }
+    @media screen and (max-width: 744px){
+        width: 100%;
+        font-size: 1rem;
+        padding: 11.5px 0;
+        margin-top: 32px;
+    }
 }
 .wrapper{
     .sectionTitle{
@@ -89,6 +139,10 @@
             font-size: 2rem;
             margin-bottom: 16px;
         }
+        @media screen and (max-width: 744px){
+            font-size: 1.75rem;
+            padding-bottom: 8px;
+        }
     }
 }
 
@@ -96,6 +150,9 @@
     margin-top: 200px;
     @media screen and (max-width: 1040px){
         margin-top: 160px;
+    }
+    @media screen and (max-width: 744px){
+        margin-top: 60px;
     }
 }
 
@@ -137,22 +194,30 @@
         &__row{
             margin-top: 40px;
             flex-direction: column;
-          }
-          &__content{
-             max-width: none;
-             p{
-                font-size: 1rem;
-             }
-             h5{
-                display: none;
-             }
-             a{
-                display: none;
-              }
-          }
-          &__slider{
-              max-width: none;
-              margin-top: 32px;
-          }
+        }
+        &__content{
+            max-width: none;
+            p{
+            font-size: 1rem;
+            }
+            h5{
+            display: none;
+            }
+            a{
+            display: none;
+            }
+        }
+        &__slider{
+            max-width: none;
+            margin-top: 32px;
+        }
+    }
+    @media screen and (max-width: 744px){
+        margin-top: 60px;
+        &__content{
+            p{
+            font-size: 0.875rem;
+            }
+        }
     }
 }

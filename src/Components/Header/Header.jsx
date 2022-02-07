@@ -25,6 +25,7 @@ export const Header = () => {
             arrowOpen={<ArrowDown2 className="open"/>}/>
           </div>
         </div>
+        <span className={s.burger}></span>
     </header>
   </div>
 };

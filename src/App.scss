@@ -31,6 +31,9 @@ body{
   @media screen and (max-width: 1440px) {
     margin: 0 40px;
   }
+  @media screen and (max-width: 744px){
+    margin: 0 20px;
+  }
 }
 
 .lang-dropdown{
@@ -296,6 +299,65 @@ section{
         max-width: 235px;
         font-size: 1rem;
         margin-bottom: 100px;
+      }
+    }
+  }
+  @media screen and (max-width: 744px){
+    .accordion__button{
+      font-size: 1.25rem;
+      svg{
+        width: 26px;
+        height: 26px;
+        margin-right: 0;
+      }
+    }
+    .accardion-row{
+      flex-direction: column;
+      div{
+        font-size: 1rem;
+        p{
+          max-width: none;
+        }
+      }
+      ul{
+        margin-top: 24px;
+        li{
+          font-size: 1rem;
+          padding: 8px 0;
+          padding-right: 12px;
+        }
+      }
+    }
+
+    .swiper {
+      padding-bottom: 24px;
+    }
+    .swiper-scrollbar{
+      width: 100% !important;
+    }
+    .swiper-slide{
+      .img-free{
+        .plus{
+          right: -20px;
+          top: 136px;
+        }
+        &:hover{
+          .img-wrapper{
+            transform: rotate(0);
+            margin-right: 0;
+          }
+        }
+      }
+      .img-wrapper{
+        width: 248px;
+        height: 320px;
+        border: 4.7px solid $text-color;
+      }
+      .name{
+        font-size: 1.25rem;
+      }
+      .job{
+        font-size: 0.875rem;
       }
     }
   }
