@@ -19,18 +19,31 @@ import "swiper/css/scrollbar"
 import SwiperCore, {Mousewheel, Scrollbar} from 'swiper';
 import { WhiteBlock } from '../../Components/WhiteBlock/WhiteBlock';
 import { AnimtedPage } from '../../AnimtedPage';
+import { motion } from 'framer-motion';
 
 SwiperCore.use([Mousewheel, Scrollbar]);
 
 export const HomePage = () => {
+  const title = {
+    show: {
+      y: [200, 0]
+    }
+  }
+
   return <AnimtedPage>
     <div className={s.wrapper}>
       <div className="container">
         <section className={s.headerSection}>
             <h1>
-              <div>Лаборатория</div> 
-              <span>цифрового</span>  
-              <div>пронстранства</div> 
+              <div className={s.overflow}>
+                <motion.h1 variants={title} animate={'show'}>Лаборатория</motion.h1> 
+              </div> 
+              <div className={s.overflow}>
+                <motion.span variants={title} animate={'show'} transition={{ delay: .2}}>цифрового</motion.span> 
+              </div> 
+              <div className={s.overflow}>
+                <motion.h1 variants={title} animate={'show'} transition={{ delay: .4}}>пронстранства</motion.h1> 
+              </div> 
             </h1>
             <ul className={s.serves}>
             <li>Сайты</li> 
@@ -45,12 +58,12 @@ export const HomePage = () => {
           <ProjectCard 
           title="Академия аукционных брокеров" 
           types={['Design','Web','Landing']} 
-          desc="Мы ежедневно делимся своим опытом, обучая партнеров приумножать капитал и масштабировать свой бизнес" 
+          desc="Инвестиционный сайт местной компании, занимающейся продажей курсов финансовой тематики." 
           src={'/img/img1.jpg'}/>
           <ProjectCard 
           title="RamDom" 
           types={['Design','Web']} 
-          desc="Мы ежедневно делимся своим опытом, обучая партнеров приумножать капитал и масштабировать свой бизнес" 
+          desc="Площадка, для покупки адаптируемых проектов домов с готовой сметой." 
           src={'/img/img2.jpg'}/>
           <NavLink to={'/portfolio'} className={s.projectsLink}>Все проекты</NavLink>
         </section>
@@ -188,10 +201,13 @@ export const HomePage = () => {
           <h1 className={s.sectionTitle}>Команда</h1>
           <div className={s.teamSection__row}>
             <div className={s.teamSection__content}>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>
+                Все начиналось с мечты двух лецеистов о создании своей собственной компании. Мы горели желанием создавать первоклассные 
+                продукты для мировых брендов, что-то, что будет приносить пользу людям. Рынок развивался, и мы развивались вместе с ним. 
+              </p>
               <h5>Награды</h5>
               <p>Победители полуфинала <br /> Цифровой прорыв</p>
-              <NavLink to="/">Перейти для ознакомления</NavLink>
+              <a href="https://leadersofdigital.ru">Перейти для ознакомления</a>
             </div>
             <div className={s.teamSection__slider}>
               <Swiper
@@ -202,26 +218,26 @@ export const HomePage = () => {
                   "clickable": true
                 }}
                 grabCursor={true}
-                mousewheel={true}
+                // mousewheel={true}
                 slidesOffsetAfter={300}
               >
                 <SwiperSlide>
-                  <SlideContent name={"Илья Фалалеев"} 
-                  job={"ux/ui Дизайнер"} 
+                  <SlideContent name={"Матвей Степанов"} 
+                  job={"Fronted-dev"} 
+                  desc={"5 лет опыта ведения проектов с нуля до продакшена, ручаюсь за качественный интерфейс вашего приложения"}
+                  src={'/img/unsplash_YmQ8TrsieE4.jpg'}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SlideContent name={"Егор Овчинников"} 
+                  job={"Backend-dev"} 
                   desc={"За почти 20 лет практики в дизайне я поработал в лучших дизайн‑командах, запускал стартапы и открыл одну из самых награждаемых дизайн‑студий в РФ и СНГ"}
-                  src={'/img/photo1.jpg'}/>
+                  src={'/img/unsplash_sibVwORYqs0.jpg'}/>
                 </SwiperSlide>
                 <SwiperSlide>
                   <SlideContent name={"Илья Фалалеев"} 
                   job={"ux/ui Дизайнер"} 
                   desc={"За почти 20 лет практики в дизайне я поработал в лучших дизайн‑командах, запускал стартапы и открыл одну из самых награждаемых дизайн‑студий в РФ и СНГ"}
-                  src={'/img/photo1.jpg'}/>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <SlideContent name={"Илья Фалалеев"} 
-                  job={"ux/ui Дизайнер"} 
-                  desc={"За почти 20 лет практики в дизайне я поработал в лучших дизайн‑командах, запускал стартапы и открыл одну из самых награждаемых дизайн‑студий в РФ и СНГ"}
-                  src={'/img/photo1.jpg'}/>
+                  src={'/img/photo_2022-01-06_19-27-01 1.jpg'}/>
                 </SwiperSlide>
               </Swiper>
             </div>

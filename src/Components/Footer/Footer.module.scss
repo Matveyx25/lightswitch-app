@@ -4,6 +4,7 @@
     width: 100%;
     padding-top: 30px;
     padding-bottom: 104px;
+    
 }
 .flex{
     display: flex;
@@ -33,4 +34,24 @@
     text-decoration: none;
     color: $text-color;
     margin-left: 8px;
+}
+
+@media screen  and (max-width: 414px){
+    .footer{
+        padding-bottom: 80px;
+    }
+    .flex{
+        flex-direction: column-reverse;
+        align-items: start;
+        &:first-child{
+            font-size: 1rem;
+        }
+    } 
+    .social{
+        font-size: 1rem;
+    }
+    .copyright{
+        margin-top: 32px;
+        font-size: 0.875rem;
+    }
 }

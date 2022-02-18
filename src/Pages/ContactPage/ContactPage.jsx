@@ -16,16 +16,10 @@ export const ContactPage = () => {
                     <a href="mailto:contact@lightswitch.digital">contact@lightswitch.digital</a>
                   </li>
                   <li>
-                    <h5>Адрес</h5>
-                    <p>Россия, Самара, улица Дыбенко, 30</p>
-                  </li>
-                  <li>
                     <h5>Социальные сети</h5>
                     <div className={s.links}>
-                        <a href="#">Instagram</a>
-                        <a href="#">twitter</a>
-                        <a href="#">facebook</a>
-                        <a href="#">vkontakte</a>
+                        <a href="https://www.instagram.com/lightswitch_digital/">Instagram</a>
+                        <a href="https://www.behance.net/lightswitch_digital">Behance</a>
                     </div>
                   </li>
                 </ul>

@@ -3,9 +3,11 @@
 .row{
     display: flex;
     margin-top: 80px;
+    margin-bottom: 120px;
     @media screen and (max-width: 1040px) {
         flex-direction: column-reverse;
         margin-top: 40px;
+        margin-bottom: 0;
     }
 }
 .info{
@@ -47,6 +49,9 @@
             font-size: 1.25rem;
             margin-top: 8px;
         }
+    }
+    @media screen and (max-width: 744px) {
+        margin-bottom: 80px;   
     }
 }
 

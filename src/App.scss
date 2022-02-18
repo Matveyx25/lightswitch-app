@@ -434,6 +434,7 @@ section{
     height: 124px;
     margin: 0;
   }
+  
   @media screen and (max-width: 1040px) {
     padding: 80px 86px;
     font-size: 1.25rem;
@@ -445,6 +446,27 @@ section{
     }
     button{
       width: 100%;
+    }
+  }
+  @media screen and (max-width: 744px){
+    border-radius: 0;
+    background: $text-color;
+    color: $background-color;
+    padding: 52px 20px;
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+    font-size: 1rem;
+    box-sizing: border-box;
+    p{
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    input, textarea{
+      font-size: 1rem;
+    }
+    button{
+      font-size: 1rem;
+      padding: 11.5px 0;
     }
   }
 }
