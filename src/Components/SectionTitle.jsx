@@ -11,12 +11,11 @@ export const SectionTitle = ({ title, id }) => {
         // });
         gsap.to(`#title${id}`, {
             x: 0,
-            duration: 5,
+            duration: 1,
             scrollTrigger: {
                 trigger: `#title${id}`,
-                start: "top 300px",
-                end: "bottom 200px",
-                // markers: true,
+                end: "top 200px",
+                markers: false,
                 scrub: true
             }
         });
