@@ -493,3 +493,12 @@ section{
       padding-bottom: 8px;
   }
 }
+
+.splitWrapper{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  .letter{
+    display: inline-block;
+  }
+}

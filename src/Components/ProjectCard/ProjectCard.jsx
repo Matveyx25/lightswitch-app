@@ -2,6 +2,7 @@ import React from 'react';
 import s from './ProjectCard.module.css'
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { SplitText } from '../SplitText';
 
 export const ProjectCard = ({title, types, desc, href, src}) => {
   return <div className={s.wrapper}>
@@ -9,7 +10,7 @@ export const ProjectCard = ({title, types, desc, href, src}) => {
         <ul>
             {types.map((type, i) => <li key={i}>{type}</li>)}
         </ul>
-        <h5>{title}</h5>
+        <h5><SplitText text={title} id={types.length}/></h5>
         <p>{desc}</p>
         <NavLink to="/">Посмотреть кейс</NavLink>
       </div>
