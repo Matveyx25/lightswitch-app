@@ -470,3 +470,26 @@ section{
     }
   }
 }
+
+.sectionTitle{
+  font-size: 3.25rem;
+  font-family: 'Dela Gothic One', cursive;
+  padding-bottom: 20px;
+  border-bottom: 2px solid $text-color;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  overflow: hidden;
+  span{
+    display: block;
+    width: fit-content;
+    transform: translateX(100vw)
+  }
+  @media screen and (max-width: 1040px){
+      font-size: 2rem;
+      margin-bottom: 16px;
+  }
+  @media screen and (max-width: 744px){
+      font-size: 1.75rem;
+      padding-bottom: 8px;
+  }
+}

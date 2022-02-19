@@ -9,7 +9,7 @@ export const WhiteBlock = () => {
     <motion.div
       initial={{ height: 0 }}
       whileInView={{ height: '100%' }}
-      viewport={{ once: true, margin: '-200px' }}
+      viewport={{ once: true}}
       className={s.bg} 
       transition={{ duration: .5 }}/>
       <div className="container">

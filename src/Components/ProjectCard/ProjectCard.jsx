@@ -15,12 +15,12 @@ export const ProjectCard = ({title, types, desc, href, src}) => {
       </div>
       <div className={s.img}>
         <motion.div 
-        viewport={{ once: true, margin: '-200px' }} 
+        viewport={{ once: true }} 
         initial={{height: 0}}
         whileInView={{height: ['0%', '100%', '100%'], y: ['0%', '0%', '100%']}}
         transition={{ duration: 1.5, times: [0, .5, 1]}}/>
         <motion.img src={src} 
-        viewport={{ once: true, margin: '-200px' }} 
+        viewport={{ once: true }} 
         initial={{ opacity: 0 }} 
         whileInView={{opacity: 1 }} 
         transition={{ duration: .1, delay: .5}}/>

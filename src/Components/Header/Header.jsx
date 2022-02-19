@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './Header.module.css';
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
-import { ArrowDown2, ArrowUp2 } from 'iconsax-react';
 
 export const Header = () => {
+  const [visible, setVisible] = useState(false)
+
   return <div className="container">
-    <header className={s.header}>
+    <header className={visible ? [s.header + ' ' + s.visible] : s.header}>
         <NavLink to={'/'} className={s.header__logo}>LightSwitch</NavLink>
         <div className={s.desctop}>
           <div className={s.header__links}>
@@ -25,7 +24,7 @@ export const Header = () => {
             arrowOpen={<ArrowDown2 className="open"/>}/> */}
           </div>
         </div>
-        <span className={s.burger}></span>
+        <span className={s.burger} onClick={() => setVisible(!visible)}></span>
     </header>
   </div>
 };

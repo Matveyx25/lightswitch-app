@@ -14,6 +14,8 @@
       font-size: 1.5rem;
       text-decoration: none;
       color: $text-color;
+      position: relative;
+      z-index: 1000;
     }
     &__links{
         display: flex;
@@ -42,9 +44,40 @@
             font-weight: 500;
         }
     }
-    .burger{display: none;}
+    .burger{
+        display: none;
+        transition: .5s;
+    }
     @media screen and (max-width: 1040px){
-        .desctop{display: none;}
+        .desctop{
+            display: block;
+            position: absolute;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            padding: 150px 40px;
+            padding-bottom: 60px;
+            background: $text-color;
+            z-index: 100;
+            border-radius: 0 0 20px 20px;
+            box-sizing: border-box;
+            transform: translateY(-100%);
+            transition: .5s;
+        }
+        .header__links{
+            flex-direction: column;
+            align-items: start;
+        }
+        .header__link{
+            color: $background-color;
+            font-size: 40px;
+            &__active{
+                display: block;
+                margin: 0;
+                font-size: 40px;
+                font-weight: normal;
+            }
+        }
         padding: 8px 0;
         .burger{
             display: flex;
@@ -53,6 +86,7 @@
             justify-content: center;
             width: 62px;
             position: relative;
+            z-index: 1000;
             &::before{
                 content: '';
                 position: relative;
@@ -60,6 +94,7 @@
                 width: 62px;
                 height: 2px;
                 background: $text-color;
+                transition: .5s;
             }
             &::after{
                 content: '';
@@ -69,10 +104,44 @@
                 height: 2px;
                 background: $text-color;
                 margin-top: 8px;
+                transition: .5s;
+            }
+        }
+        &.visible{
+            .desctop{
+                transform: translateY(0);
+            }
+            .burger{
+                &::before{
+                    content: '';
+                    transform: rotate(45deg);
+                    width: 52px;
+                    background: $background-color;
+                }
+                &::after{
+                    content: '';
+                    transform: rotate(-45deg);
+                    width: 52px;
+                    background: $background-color;
+                    margin: 0;
+                }
+            }
+            .header__logo{
+                color: $background-color;
             }
         }
     }
     @media screen and (max-width: 744px){
+        .desctop{
+            padding: 120px 20px;
+            padding-bottom: 40px;
+        }
+        .header__link{
+            font-size: 32px;
+            &__active{
+                font-size: 32px;
+            }
+        }
         padding: 0;
         border-bottom: none;
     }

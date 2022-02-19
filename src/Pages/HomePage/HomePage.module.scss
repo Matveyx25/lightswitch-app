@@ -22,7 +22,7 @@
         text-transform: uppercase;
         display: block;
         text-align: center;
-        font-size: 7.8vw;
+        font-size: 7vw;
         position: relative;
         span{
             display: block;
@@ -110,24 +110,6 @@
         font-size: 1rem;
         padding: 11.5px 0;
         margin-top: 32px;
-    }
-}
-.wrapper{
-    .sectionTitle{
-        font-size: 3.25rem;
-        font-family: 'Dela Gothic One', cursive;
-        padding-bottom: 20px;
-        border-bottom: 2px solid $text-color;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        @media screen and (max-width: 1040px){
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }
-        @media screen and (max-width: 744px){
-            font-size: 1.75rem;
-            padding-bottom: 8px;
-        }
     }
 }
 

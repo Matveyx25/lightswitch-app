@@ -1,18 +1,9 @@
 import React from 'react';
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
-
 import s from './HomePage.module.css'
 import { ProjectCard } from '../../Components/ProjectCard/ProjectCard';
 import { SlideContent } from '../../Components/SlideContent';
 import { NavLink } from 'react-router-dom';
-import { Add } from 'iconsax-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/scrollbar"
@@ -20,6 +11,9 @@ import SwiperCore, {Mousewheel, Scrollbar} from 'swiper';
 import { WhiteBlock } from '../../Components/WhiteBlock/WhiteBlock';
 import { AnimtedPage } from '../../AnimtedPage';
 import { motion } from 'framer-motion';
+import { AccordionChild } from '../../Components/AccordionComponent/AccordionChild';
+import { Accordion } from 'react-accessible-accordion';
+import { SectionTitle } from '../../Components/SectionTitle';
 
 SwiperCore.use([Mousewheel, Scrollbar]);
 
@@ -54,7 +48,7 @@ export const HomePage = () => {
             </ul>
         </section>
         <section className={s.projectsSection}>
-          <h1 className={s.sectionTitle}>Проекты</h1>
+          <SectionTitle title={"Проекты"} id={1}/>
           <ProjectCard 
           title="Академия аукционных брокеров" 
           types={['Design','Web','Landing']} 
@@ -68,86 +62,24 @@ export const HomePage = () => {
           <NavLink to={'/portfolio'} className={s.projectsLink}>Все проекты</NavLink>
         </section>
         <section className={s.serveSection}>
-          <h1 className={s.sectionTitle}>Услуги</h1>
+        <SectionTitle title={"Услуги"} id={2}/>
           <Accordion allowZeroExpanded>
-              <AccordionItem>
-                  <AccordionItemHeading>
-                      <AccordionItemButton>
-                        <p>Сайты</p> 
-                        <Add/>
-                      </AccordionItemButton>
-                  </AccordionItemHeading>
-
-                  <AccordionItemPanel>
-                    <div className="accardion-row">
-                      <div>
-                        <p>
-                            Мы занимаемся разработкой различных сайтов вот уже 8 лет. Умеем граматно презентовать продукт, превратить посетителей в заинтересованных продуктом людей. От красивых лендингов, которые поражают своей креативностью и эстетикой, до корпоративных порталов, обслуживающих сотни тысяч сотрудников.
-                        </p>  
-                      </div>
-                      <ul>
-                        <li>Брифинг<Add/></li>
-                        <li>UX/Аналитика<Add/></li>
-                        <li>Дизайн концепт<Add/></li>
-                        <li>Дизайн всех страниц<Add/></li>
-                        <li>Адаптивы<Add/></li>
-                        <li>Верстка<Add/></li>
-                      </ul>
-                    </div>
-                  </AccordionItemPanel>
-              </AccordionItem>
-              <AccordionItem>
-                  <AccordionItemHeading>
-                      <AccordionItemButton>
-                        <p>Приложения</p> 
-                        <Add/>
-                      </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel>
-                    <div className="accardion-row">
-                      <div>
-                        <p>
-                            С 2016 года разрабатываем мобильные приложения для компаний из России, США и Европы. Из простой идеи заказчика сделаем приложение, которое пользователи захотят иметь у себя в смартфоне.
-                        </p>
-                      </div>
-                      <ul>
-                        <li>Брифинг<Add/></li>
-                        <li>UX/Аналитика<Add/></li>
-                        <li>Дизайн концепт<Add/></li>
-                        <li>Дизайн всех страниц<Add/></li>
-                        <li>Адаптивы<Add/></li>
-                        <li>Верстка<Add/></li>
-                      </ul>
-                    </div>
-                  </AccordionItemPanel>
-              </AccordionItem>
-              <AccordionItem>
-                  <AccordionItemHeading>
-                      <AccordionItemButton>
-                        <p>Айдентика</p> 
-                        <Add/>
-                      </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel>
-                    <div className="accardion-row">
-                      <div>
-                        <p>
-                            Разработаем совокупность элементов и материалов, которые создают красивый образ компании в глазах потребителей. Идентичность работает на узнаваемость и запоминаемость бренда, и создает первое впечатление о нем.
-                        </p>
-                      </div>
-                      <ul>
-                        <li>Брифинг<Add/></li>
-                        <li>Анализ рынка и мудборд<Add/></li>
-                        <li>Разработка концепций фирменного стиля<Add/></li>
-                        <li>Создание брендбука<Add/></li>
-                      </ul>
-                    </div>
-                  </AccordionItemPanel>
-              </AccordionItem>
+            <AccordionChild 
+            title={'Сайты'}
+            desc={'Мы занимаемся разработкой различных сайтов вот уже 8 лет. Умеем граматно презентовать продукт, превратить посетителей в заинтересованных продуктом людей. От красивых лендингов, которые поражают своей креативностью и эстетикой, до корпоративных порталов, обслуживающих сотни тысяч сотрудников.'}
+            points={['Брифинг', 'UX/Аналитика', 'Дизайн концепт', 'Дизайн всех страниц', 'Адаптивы', 'Верстка']}/>
+            <AccordionChild 
+            title={'Приложения'}
+            desc={'С 2016 года разрабатываем мобильные приложения для компаний из России, США и Европы. Из простой идеи заказчика сделаем приложение, которое пользователи захотят иметь у себя в смартфоне.'}
+            points={['Брифинг', 'UX/Аналитика', 'Дизайн концепт', 'Дизайн всех страниц', 'Адаптивы', 'Верстка']}/>
+            <AccordionChild 
+            title={'Айдентика'}
+            desc={'Разработаем совокупность элементов и материалов, которые создают красивый образ компании в глазах потребителей. Идентичность работает на узнаваемость и запоминаемость бренда, и создает первое впечатление о нем.'}
+            points={['Брифинг', 'Анализ рынка и мудборд', 'Разработка концепций фирменного стиля', 'Создание брендбука']}/>
           </Accordion>
         </section>
         <section className={s.teamSection}>
-          <h1 className={s.sectionTitle}>Команда</h1>
+        <SectionTitle title={"Команда"} id={3}/>
           <div className={s.teamSection__row}>
             <div className={s.teamSection__content}>
               <p>
