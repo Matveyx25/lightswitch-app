@@ -11,7 +11,7 @@ export const ProjectCard = ({title, types, desc, href, src}) => {
         </ul>
         <h5>{title}</h5>
         <p>{desc}</p>
-        <NavLink to="/">Посмотреть кейс</NavLink>
+        <NavLink to="/">View project</NavLink>
       </div>
       <div className={s.img}>
         <motion.div 

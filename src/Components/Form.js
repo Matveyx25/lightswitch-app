@@ -18,16 +18,16 @@ export const ContactUs = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail} className='contactForm'>
-      <p>Отправьте нам сообщение и наша команда свяжется с вами в скором времени</p>
+      <p>Send us a message and our team will contact you shortly</p>
       {!isSended ? 
       <div>
-      <input type="text" name="user_name" placeholder='Имя'/>
-      <input type="email" name="user_email" placeholder="Электронная почта"/>
-      <input type="phone" name="user_phone" placeholder="Номер телефона"/>
-      <textarea name="message" placeholder="Ваше сообщение"/>
-      <button type="submit">Отправить сообщение</button>
+      <input type="text" name="user_name" placeholder='Name'/>
+      <input type="email" name="user_email" placeholder="Email"/>
+      <input type="phone" name="user_phone" placeholder="Phone"/>
+      <textarea name="message" placeholder="Tell us about your project"/>
+      <button type="submit">Submit</button>
       </div> : 
-      <h1>Ваше сообщение отправлено</h1>
+      <h1>Your message has been sent</h1>
       }
     </form>
   );

@@ -9,13 +9,13 @@ export const ProjectsPage = () => {
   return  <AnimtedPage>
     <div className="container">
         <section className={s.projectsSection}>
-            <h1 className={s.sectionTitle}>Проекты</h1>
+            <h1 className={s.sectionTitle}>Projects</h1>
             <Masonry
             breakpointCols={{1140: 1}}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column">
                     <FlexCard 
-                    title="Академия аукционных брокеров" 
+                    title="Lot Brokers Academy"
                     types={['Design','Web','Landing']} 
                     desc="Мы ежедневно делимся своим опытом, обучая партнеров приумножать капитал и масштабировать свой бизнес" 
                     src={'/img/imgBig.jpg'}/>
@@ -25,7 +25,7 @@ export const ProjectsPage = () => {
                     desc="Мы ежедневно делимся своим опытом, обучая партнеров приумножать капитал и масштабировать свой бизнес" 
                     src={'/img/img2.jpg'}/>
                     <FlexCard 
-                    title="Академия аукционных брокеров" 
+                    title="Lot Brokers Academy"
                     types={['Design','Web','Landing']} 
                     desc="Мы ежедневно делимся своим опытом, обучая партнеров приумножать капитал и масштабировать свой бизнес" 
                     src={'/img/imgBig.jpg'}/>

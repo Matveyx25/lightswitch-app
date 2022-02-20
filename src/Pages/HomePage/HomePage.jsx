@@ -30,68 +30,65 @@ export const HomePage = () => {
         <section className={s.headerSection}>
             <h1>
               <div className={s.overflow}>
-                <motion.h1 variants={title} animate={'show'}>Лаборатория</motion.h1> 
+                <motion.h1 variants={title} animate={'show'}>making</motion.h1>
               </div> 
               <div className={s.overflow}>
-                <motion.span variants={title} animate={'show'} transition={{ delay: .2}}>цифрового</motion.span> 
+                <motion.span variants={title} animate={'show'} transition={{ delay: .2}}>digital space</motion.span>
               </div> 
               <div className={s.overflow}>
-                <motion.h1 variants={title} animate={'show'} transition={{ delay: .4}}>пронстранства</motion.h1> 
+                <motion.h1 variants={title} animate={'show'} transition={{ delay: .4}}>a better place</motion.h1>
               </div> 
             </h1>
             <ul className={s.serves}>
-            <li>Сайты</li> 
-            <li>Магазины</li> 
-            <li>Приложения</li> 
-            <li>Айдентика</li> 
-            <li>Дизайн поддержка</li> 
+            <li>Websites</li>
+            <li>Ecommerce</li>
+            <li>Apps</li>
+            <li>Identity</li>
+            <li>Design support</li>
             </ul>
         </section>
         <section className={s.projectsSection}>
-          <SectionTitle title={"Проекты"} id={1}/>
+          <SectionTitle title={"Projects"} id={1}/>
           <ProjectCard 
-          title="Академия аукционных брокеров" 
+          title="Lot Brokers Academy"
           types={['Design','Web','Landing']} 
-          desc="Инвестиционный сайт местной компании, занимающейся продажей курсов финансовой тематики." 
+          desc="Investment website of a local company selling financial courses."
           src={'/img/img1.jpg'}/>
           <ProjectCard 
           title="RamDom" 
           types={['Design','Web']} 
-          desc="Площадка, для покупки адаптируемых проектов домов с готовой сметой." 
+          desc="A site for buying adaptable home designs with ready-made estimates."
           src={'/img/img2.jpg'}/>
-          <NavLink to={'/portfolio'} className={s.projectsLink}>Все проекты</NavLink>
+          <NavLink to={'/portfolio'} className={s.projectsLink}>All projects</NavLink>
         </section>
         <section className={s.serveSection}>
-        <SectionTitle title={"Услуги"} id={2}/>
+        <SectionTitle title={"Services"} id={2}/>
           <Accordion allowZeroExpanded>
             <AccordionChild 
-            title={'Сайты'}
-            desc={'Мы занимаемся разработкой различных сайтов вот уже 8 лет. Умеем граматно презентовать продукт, превратить посетителей в заинтересованных продуктом людей. От красивых лендингов, которые поражают своей креативностью и эстетикой, до корпоративных порталов, обслуживающих сотни тысяч сотрудников.'}
-            points={['Брифинг', 'UX/Аналитика', 'Дизайн концепт', 'Дизайн всех страниц', 'Адаптивы', 'Верстка']}/>
+            title={'Websites'}
+            desc={'We have been developing various websites for 8 years. We know how to intelligently present a product and turn visitors into people interested in the product. From beautiful web-sites that impress with their creativity and aesthetics, to corporate portals that serve hundreds of thousands of employees.'}
+            points={['Briefing', 'UX/Analysis', 'Design concept', 'Pages design', 'Adaptation']}/>
             <AccordionChild 
-            title={'Приложения'}
-            desc={'С 2016 года разрабатываем мобильные приложения для компаний из России, США и Европы. Из простой идеи заказчика сделаем приложение, которое пользователи захотят иметь у себя в смартфоне.'}
-            points={['Брифинг', 'UX/Аналитика', 'Дизайн концепт', 'Дизайн всех страниц', 'Адаптивы', 'Верстка']}/>
+            title={'Apps'}
+            desc={'Since 2016 we have been developing mobile apps for companies from Russia, USA and Europe. From a simple idea of the customer we will make an application that users will want to have in their smartphone.'}
+            points={['Briefing', 'UX/Analysis', 'Design concept', 'Pages design', 'Adaptation']}/>
             <AccordionChild 
-            title={'Айдентика'}
-            desc={'Разработаем совокупность элементов и материалов, которые создают красивый образ компании в глазах потребителей. Идентичность работает на узнаваемость и запоминаемость бренда, и создает первое впечатление о нем.'}
-            points={['Брифинг', 'Анализ рынка и мудборд', 'Разработка концепций фирменного стиля', 'Создание брендбука']}/>
+            title={'Identity'}
+            desc={'We develop a set of elements and materials that create a beautiful image of the company in the eyes of consumers. Identity works for brand recognition and memorability, and creates a first impression of the brand.'}
+            points={['Briefing', 'UX/Analysis', 'Design concept', 'Pages design', 'Adaptation']}/>
           </Accordion>
         </section>
         <section className={s.teamSection}>
-        <SectionTitle title={"Команда"} id={3}/>
+        <SectionTitle title={"About us"} id={3}/>
           <div className={s.teamSection__row}>
             <div className={s.teamSection__content}>
               <p>
-                  Все начиналось с мечты двух студентов
-                  <br/>
-                  о том, что они будут создавать крутые digital-продукты для мировых брендов.
-                  Мы горели желанием создавать первоклассные проекты, что-то, что будет приносить пользу компаниям и людям в целом. Рынок развивался, и мы развивались вместе с ним.
-                  Годы практики в мире IT сделали нас специалистами своей области.
+                It all started with a dream of two students
+                that they would create cool digital products for global brands. We were burning with the desire to create first-class projects, something that would benefit companies and people in general. The marketplace evolved, and we evolved with it. Years of practice in the IT world have made us experts in our field.
               </p>
-              <h5>Награды</h5>
-              <p>Победители полуфинала <br /> Цифровой прорыв</p>
-              <a href="https://leadersofdigital.ru">Перейти для ознакомления</a>
+              <h5>Nominations</h5>
+              <p>Winners of semifinal<br /> <b>Leaders of digital</b></p>
+              <a href="https://leadersofdigital.ru">Learn more</a>
             </div>
             <div className={s.teamSection__slider}>
               <Swiper
@@ -106,21 +103,21 @@ export const HomePage = () => {
                 slidesOffsetAfter={300}
               >
                 <SwiperSlide>
-                  <SlideContent name={"Егор Овчинников"}
+                  <SlideContent name={"Egor Ovchinnikov"}
                                 job={"Software Engineer"}
-                                desc={"Стал программировать раньше, чем начал ходить. За 8 лет разработки поработал в пяти российских IT-гигантах, а так же активно учавствовал в развитии проектов с открытым исходным кодом и делал вклад в комьюнити"}
+                                desc={"Started programming before I started walking. During 8 years of development I worked in five Russian IT-giants, as well as actively participated in the development of open source projects and contributed to the community"}
                                 src={'/img/niger.webp'}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <SlideContent name={"Матвей Степанов"} 
+                  <SlideContent name={"Matvey Stepanov"}
                   job={"Frontend Developer"}
-                  desc={"5 лет опыта ведения проектов с нуля до продакшена, ручаюсь за качественный интерфейс вашего приложения"}
+                  desc={"5 years of experience in running projects from scratch to production, I vouch for the quality of the interface of your application"}
                   src={'/img/gypsy.jpg'}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <SlideContent name={"Илья Фалалеев"} 
-                  job={"UX/UI Дизайнер"}
-                  desc={"За почти 20 лет практики в дизайне я поработал в лучших дизайн‑командах, запускал стартапы и открыл одну из самых награждаемых дизайн‑студий в РФ и СНГ"}
+                  <SlideContent name={"Ilya Falaleev"}
+                  job={"UX/UI Designer"}
+                  desc={"In nearly 20 years of design practice, I have worked in the best design teams, launched startups, and opened one of the most award-winning design studios in Russia and the CIS"}
                   src={'/img/photo_2022-01-06_19-27-01 1.jpg'}/>
                 </SwiperSlide>
               </Swiper>

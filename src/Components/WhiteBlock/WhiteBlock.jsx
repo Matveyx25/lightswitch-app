@@ -13,9 +13,9 @@ export const WhiteBlock = () => {
       className={s.bg} 
       transition={{ duration: .5 }}/>
       <div className="container">
-        <motion.h1 viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ delay: .5 }}>Понравились работы ?</motion.h1>
-        <motion.p viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ delay: .5 }}>Свяжитесь с нами и давайте вместе создадим что-то удивительное</motion.p>
-        <NavLink to="/contact">Написать нам</NavLink>
+        <motion.h1 viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ delay: .5 }}>Enjoy our work ?</motion.h1>
+        <motion.p viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ delay: .5 }}>Contact us and let's create something amazing together</motion.p>
+        <NavLink to="/contact">Contact us</NavLink>
       </div>
     </section>
 };

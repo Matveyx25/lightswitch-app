@@ -11,11 +11,11 @@ export const Header = () => {
         <div className={s.desctop}>
           <div className={s.header__links}>
             <ul>
-              <li><NavLink to={'/portfolio'} className={s.header__link}>Наши проекты</NavLink></li>
+              <li><NavLink to={'/portfolio'} className={s.header__link}>Projects</NavLink></li>
               {/* <li><NavLink to={'/serves'} className={s.header__link}>Услуги</NavLink></li> */}
               {/* <li><NavLink to={'/team'} className={s.header__link}>Команда</NavLink></li> */}
             </ul>
-            <NavLink to={'/contact'} className={s.header__link__active}>Связаться</NavLink>
+            <NavLink to={'/contact'} className={s.header__link__active}>Contact us</NavLink>
             {/* <Dropdown 
             options={['ru', 'en']} 
             value={'ru'} 
